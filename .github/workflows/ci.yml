@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install black flake8 pytest
+      - name: Lint
+        run: |
+          black --check .
+          flake8 .
+      - name: DAG import tests
+        run: |
+          python projects/04-orchestration-airflow/tests/test_dag_imports.py

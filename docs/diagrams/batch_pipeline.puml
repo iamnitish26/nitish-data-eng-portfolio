@@ -1,0 +1,13 @@
+@startuml
+skinparam shadowing false
+skinparam handwritten false
+actor User
+rectangle "S3 (raw)" as S3R
+rectangle "EMR / Spark" as EMR
+rectangle "S3 (curated Parquet)" as S3C
+rectangle "Glue/Athena" as ATH
+User -> S3R : Upload CSV (ingest)
+S3R -> EMR : ETL job (PySpark)
+EMR -> S3C : Write Parquet partitioned by dt
+S3C -> ATH : Create/Update external tables
+@enduml

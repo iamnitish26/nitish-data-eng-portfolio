@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Spark
+.metastore_db/
+spark-warehouse/
+
+# Airflow
+airflow_logs/
+dags/__pycache__/
+
+# Data
+data/tmp/
+*.parquet
+
+# OS
+.DS_Store
