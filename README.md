@@ -1,3 +1,4 @@
+![CI](https://github.com/iamnitish26/nitish-data-eng-portfolio/actions/workflows/ci.yml/badge.svg)
 # Nitish — Data Engineering Portfolio (AWS • Python • Spark)
 
 This repository showcases end‑to‑end data engineering projects aligned with AWS-first architectures and Python/PySpark.
