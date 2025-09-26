@@ -4,16 +4,23 @@ import random
 import datetime as dt
 
 CITIES = [
-    "London", "Watford", "Birmingham", "Manchester",
-    "Leeds", "Glasgow", "Liverpool", "Bristol"
+    "London",
+    "Watford",
+    "Birmingham",
+    "Manchester",
+    "Leeds",
+    "Glasgow",
+    "Liverpool",
+    "Bristol",
 ]
+
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="../../data/raw/trips_big.csv")
     ap.add_argument("--rows", type=int, default=100_000)  # default: 100k rows
-    ap.add_argument("--start", default="2025-08-25")      # starting date
-    ap.add_argument("--days", type=int, default=7)        # number of days
+    ap.add_argument("--start", default="2025-08-25")  # starting date
+    ap.add_argument("--days", type=int, default=7)  # number of days
     args = ap.parse_args()
 
     start = dt.datetime.fromisoformat(args.start)
@@ -29,7 +36,7 @@ def main():
             city = random.choices(
                 CITIES,
                 weights=[30, 10, 12, 15, 8, 8, 10, 7],  # bias towards London
-                k=1
+                k=1,
             )[0]
 
             # trip distance (skewed, realistic distribution)
@@ -45,6 +52,7 @@ def main():
             fare = round(base * surge, 2)
 
             w.writerow([tid + i, d.strftime("%Y-%m-%d %H:%M:%S"), city, km, fare])
+
 
 if __name__ == "__main__":
     main()
