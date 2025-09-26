@@ -7,7 +7,7 @@ trade‑offs, and how to run locally or on AWS.
 > Tip: Start by skimming **/docs/portfolio_showcase.md** for how to present this portfolio on GitHub/LinkedIn/Resume.
 
 ## Projects
-- [`projects/01-batch-s3-glue-emr/`](projects/01-batch-s3-glue-emr) — Batch ETL on S3 with Glue‑style PySpark, partitioning, Parquet, and Athena DDL.
+- [`projects/01-batch-s3-glue-emr/`](projects/01-batch-s3-glue-emr) — Batch ETL on S3 with Glue-style PySpark, partitioning, Parquet, and Athena DDL (**now with Advanced Mode: 1M-row generator, incremental loads, Iceberg-ready, Airflow DAG, and tests**).
 - [`projects/02-streaming-kinesis-lambda/`](projects/02-streaming-kinesis-lambda) — Streaming events with Kinesis → Lambda → S3 (with a local simulator).
 - [`projects/03-redshift-warehouse/`](projects/03-redshift-warehouse) — Dimensional model in Redshift, staging → dims/facts, stored procedures, and incremental loads.
 - [`projects/04-orchestration-airflow/`](projects/04-orchestration-airflow) — Airflow DAGs orchestrating batch + dq checks and external task dependencies.
