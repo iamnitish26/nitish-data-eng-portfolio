@@ -6,7 +6,7 @@
 - Use GitHub Topics: `data-engineering` `aws` `spark` `pyspark` `redshift` `airflow` `kinesis` `great-expectations`.
 - Add badges (build status, license).
 
-## On LinkedIn
+## On LinkedIn Profile
 - Add a **Featured** item linking to this repo.
 - Post a short launch thread:
   - Why: “hands‑on portfolio to demonstrate production‑grade DE patterns on AWS”
